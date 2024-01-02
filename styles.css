@@ -1,0 +1,108 @@
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0; /* Background color for the body */
+}
+
+.content {
+  text-align: center;
+  margin-top: 80px; /* Adjusted margin for better alignment with the top bar */
+}
+
+.progress-box {
+  background-color: #fff;
+  padding: 15px; /* Adjusted padding for smaller screens */
+  border-radius: 10px; /* Slightly smaller rounded corners for the progress box */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift effect */
+  margin-bottom: 20px;
+}
+
+.progress-container {
+  text-align: center;
+  position: relative; /* Relative positioning for the progress bar container */
+}
+
+.progress-bar {
+  height: 20px; /* Reduced height for a smaller progress bar */
+  background-color: rgba(173, 216, 230, 0.5); /* Semi-blue color for the progress bar */
+  margin: 10px 0;
+  position: relative;
+  border-radius: 10px; /* Slightly smaller rounded corners for the progress bar */
+  overflow: hidden;
+}
+
+.progress-bar::after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 0;
+  background-color: #4caf50;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px; /* Slightly smaller rounded corners for the progress indicator */
+  transition: width 0.5s; /* Smooth transition for the progress indicator */
+}
+
+.progress-text {
+  position: relative; /* Change position to relative */
+  display: inline-block; /* Display as inline-block to allow side-by-side alignment */
+  margin-left: 10px; /* Add some margin for spacing */
+  color: #2196F3; /* Blue color for the percentage text */
+  white-space: nowrap; /* Prevent text from wrapping */
+  font-size: 16px; /* Adjust font size */
+}
+
+/* Styles for a hover effect */
+.progress-bar:hover::after {
+  background-color: #ff9800; /* Change color on hover */
+}
+
+/* Animation for a pulsating effect */
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply pulsating animation */
+.progress-bar::after {
+  animation: pulsate 1s infinite;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+  .progress-text {
+    margin-left: 0; /* Remove margin for smaller screens */
+    margin-top: 10px; /* Add top margin for better spacing */
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .progress-box {
+    padding: 10px; /* Further adjusted padding for smaller screens */
+  }
+
+  .follow-button {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  /* Adjustments for smaller screens */
+  .progress-bar {
+    height: 15px; /* Reduced height for a smaller progress bar on smaller screens */
+    border-radius: 8px; /* Slightly smaller rounded corners for the progress bar on smaller screens */
+  }
+
+  .progress-bar::after {
+    border-radius: 8px; /* Slightly smaller rounded corners for the progress indicator on smaller screens */
+  }
+}
