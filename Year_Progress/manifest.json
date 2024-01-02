@@ -1,0 +1,17 @@
+{
+    "name": "Year Progress Bar",
+    "short_name": "ProgressBar",
+    "description": "A simple progress bar web app",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f0f0f0",
+    "theme_color": "#2196F3",
+    "icons": [
+      {
+        "src": "/icon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ]
+  }
+  
